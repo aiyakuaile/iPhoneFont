@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zif-WQ-SxY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--字体展示-->
+        <scene sceneID="I3n-Pn-a1X">
+            <objects>
+                <tableViewController id="tp3-D0-JSh" customClass="FFTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="146" sectionHeaderHeight="18" sectionFooterHeight="18" id="oVm-Rc-608">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="E9E-Xg-5Bz" customClass="FFTableViewCell">
+                                <rect key="frame" x="0.0" y="56" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E9E-Xg-5Bz" id="FUL-0d-NOv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你好 Hellow World ！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJC-36-mGP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="MJC-36-mGP" secondAttribute="bottom" id="Oee-fh-xfQ"/>
+                                        <constraint firstItem="MJC-36-mGP" firstAttribute="top" secondItem="FUL-0d-NOv" secondAttribute="top" id="S4d-AB-Kmx"/>
+                                        <constraint firstAttribute="trailing" secondItem="MJC-36-mGP" secondAttribute="trailing" id="ffC-GA-blh"/>
+                                        <constraint firstItem="MJC-36-mGP" firstAttribute="leading" secondItem="FUL-0d-NOv" secondAttribute="leading" id="uXn-Sx-CK4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fontLabel" destination="MJC-36-mGP" id="80h-q0-HAg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tp3-D0-JSh" id="aeJ-dU-KOT"/>
+                            <outlet property="delegate" destination="tp3-D0-JSh" id="zkB-ps-ypc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="字体展示" id="vDK-oe-giA"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mb5-nW-5Ve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912.79999999999995" y="38.23088455772114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CJw-4h-Gw0">
+            <objects>
+                <navigationController id="zif-WQ-SxY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3ca-Cw-8fk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tp3-D0-JSh" kind="relationship" relationship="rootViewController" id="4dg-er-EWD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sBl-iV-4H8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="39"/>
+        </scene>
+    </scenes>
+</document>
